@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+spec:
+  source:
+    repoURL: <your-azure-devops-repo-url>
+    targetRevision: HEAD
+    path: /path/to/app
+  destination:
+    server: https://dev.azure.com/<your-organization>
+    namespace: default
+  project: default
